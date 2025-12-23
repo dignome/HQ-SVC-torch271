@@ -1,0 +1,25 @@
+# 推理环境配置
+device: 'cuda'
+
+# 模型路径
+model_path: utils/pretrain/250000_step_val_loss_0.50.pth
+
+# 核心模型参数 (必须保留，用于初始化网络结构)
+use_tfm: True
+mode: [film_mlp, infonce, pred_f0] 
+
+# 音频处理参数
+sample_rate: 44100
+encoder_sr: 16000
+vocoder: 'nsf-hifigan'
+hop_size: 256  # 建议保留，部分模型初始化需要显式指定步长
+
+# 扩散模型推理设置
+infer_speedup: 10
+infer_method: 'dpm-solver'
+
+# 特征提取配置
+f0_extractor: rmvpe
+block_size: 512 
+f0_min: 60
+f0_max: 1200

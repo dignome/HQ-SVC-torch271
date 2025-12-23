@@ -6,7 +6,7 @@ Official Repository of Paper: "Towards High-Quality Zero-Shot Singing Voice Conv
     </p>
     <a href="https://arxiv.org/abs/2511.08496"><img src="https://img.shields.io/badge/arXiv-2511.08496-b31b1b.svg?logo=arxiv&logoColor=white" alt="arXiv"></a>
     <a href="https://shawnpi233.github.io/HQ-SVC-demo"><img src="https://img.shields.io/badge/Demos-🌐-blue" alt="Demos"></a>
-
+    <a href="https://huggingface.co/shawnpi/HQ-SVC"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Models%20-%20Access-orange" alt="Models Access"></a>
 </div>
 
 ## 🗞 News
@@ -36,10 +36,9 @@ Unlike existing methods that demand large datasets or heavy computational resour
 - 🎯 Superior naturalness and speaker similarity compared to SOTA methods
 
 ## 🎸 Try Inference
-### 1. Download Environment and Pretrained Models 下载环境
+### 1. Download Environment 下载环境
 ```bash
 wget -c https://huggingface.co/shawnpi/HQ-SVC/resolve/main/environment.tar.gz
-wget -c
 ```
 ```bash
 wget -c https://hf-mirror.com/shawnpi/HQ-SVC/resolve/main/environment.tar.gz # 可选镜像源
@@ -56,10 +55,30 @@ tar -xzf environment.tar.gz -C venv
 source venv/bin/activate
 ```
 
-### 4.Running 运行
+### 4. Download Pretrained Models 激活环境
+```bash
+export HF_HUB_ENABLE_HF_TRANSFER=0 
+huggingface-cli download shawnpi/HQ-SVC --include "utils/pretrain/*" --local-dir . --max-workers 1
+```
+
+### 5.Running 运行
 ```bash
 python gradio_app.py
 ```
+
+<div align="center">
+<img src="images/sr.png" alt="sr" width="500">
+
+**Zero-shot Super-Resolution (16 kHz to 44.1 kHz)**: Input only `source` audio
+</div>
+
+
+<div align="center">
+<img src="images/svc.png" alt="svc" width="500">
+
+
+**Zero-shot Singing Voice Conversion**: Input both `source` audio and `target` audio
+</div>
 
 ## 📜 Citation
 

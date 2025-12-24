@@ -98,5 +98,15 @@ If you use HQ-SVC in your research, please cite our work:
 }
 ```
 
+## 🙏 Acknowledgement
+
+We thank the open-source communities behind:
+
+* **[DDSP-SVC](https://github.com/yxlllc/DDSP-SVC)**
+* **[Amphion](https://github.com/open-mmlab/Amphion)**
+* **[NaturalSpeech 3](https://speechresearch.github.io/naturalspeech3/)**
+* **[NSF-HIFAGAN](https://github.com/openvpi/vocoders)**
+* **[RMVPE](https://github.com/Dream-High/RMVPE)**
+
 ## ⭐️ Star History
 [![Star History Chart](https://api.star-history.com/svg?repos=ShawnPi233/HQ-SVC&type=date&legend=top-left)](https://www.star-history.com/#ShawnPi233/HQ-SVC&type=date&legend=top-left)

@@ -55,7 +55,7 @@ tar -xzf environment.tar.gz -C venv
 source venv/bin/activate
 ```
 
-### 4. Download Pretrained Models 激活环境
+### 4. Download Pretrained Models 下载权重
 ```bash
 export HF_HUB_ENABLE_HF_TRANSFER=0 
 huggingface-cli download shawnpi/HQ-SVC --include "utils/pretrain/*" --local-dir . --max-workers 1

@@ -64,13 +64,20 @@ source venv/bin/activate
 ```bash
 export HF_HUB_ENABLE_HF_TRANSFER=0
 huggingface-cli download shawnpi/HQ-SVC --include "utils/pretrain/*" --local-dir . --local-dir-use-symlinks False
-huggingface-cli download shawnpi/HQ-SVC --include "utils/Amphion/*" --local-dir . --local-dir-use-symlinks False
 ```
 
 ### 5. Running 运行
 ```bash
 python gradio_app.py
 ```
+
+* 如果报错 Caught signal 11 (Segmentation fault: address not mapped to object at address (nil)) 
+* 请执行以下代码后再启动上述代码
+```bash
+unset LD_LIBRARY_PATH
+``` 
+
+
 
 <div align="center">
 <img src="images/sr.png" alt="sr" width="500">

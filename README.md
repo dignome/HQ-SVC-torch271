@@ -1,5 +1,7 @@
 This repo just upgrades torch to 2.7.1 for RTX 50 series compatibility.  Also stripped out AudioSR / torchvision which are not needed to run the gradio demo.
 
+Follow the original install instructions and then use the updated requirements.txt
+
 # HQ-SVC: Towards High-Quality Zero-Shot Singing Voice Conversion in Low-Resource Scenarios
 Official Repository of Paper: "Towards High-Quality Zero-Shot Singing Voice Conversion in Low-Resource Scenarios"(AAAI 2026)
 <div align="center">
